@@ -1,6 +1,7 @@
 ---
-title: 读SICP前二章有感——复杂的事物简单理解
+title: 读SICP前二章有感
 date: '2018-07-29'
+spoiler: '复杂的事物简单理解'
 layout: post
 category: 读书
 tags: [SICP, Programming, Wishful thinking]
