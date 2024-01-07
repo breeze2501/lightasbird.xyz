@@ -63,7 +63,7 @@ function PostTitle({ post }) {
   let darkEnd = new Color("lab(78 19.97 -36.75)");
   let darkRange = darkStart.range(darkEnd);
   let today = new Date();
-  let timeSinceFirstPost = (today - new Date(2018, 10, 30)).valueOf();
+  let timeSinceFirstPost = (today - new Date(2014, 6, 27)).valueOf();
   let timeSinceThisPost = (today - new Date(post.date)).valueOf();
   let staleness = timeSinceThisPost / timeSinceFirstPost;
 
