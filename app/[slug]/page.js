@@ -8,6 +8,8 @@ import rehypePrettyCode from "rehype-pretty-code";
 import { remarkMdxEvalCodeBlock } from "./mdx.js";
 import overnight from "overnight/themes/Overnight-Slumber.json";
 import "./markdown.css";
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
 
 overnight.colors["editor.background"] = "var(--code-bg)";
 
@@ -49,6 +51,12 @@ export default async function PostPage({ params }) {
         })}
       </p>
       <div className="markdown mt-10">
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+          integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+          crossorigin="anonymous"
+        />
         <MDXRemote
           source={content}
           components={{
@@ -61,6 +69,7 @@ export default async function PostPage({ params }) {
               remarkPlugins: [
                 remarkSmartpants,
                 [remarkMdxEvalCodeBlock, filename],
+                remarkMath,
               ],
               rehypePlugins: [
                 [
@@ -69,6 +78,7 @@ export default async function PostPage({ params }) {
                     theme: overnight,
                   },
                 ],
+                rehypeKatex,
               ],
             },
           }}
