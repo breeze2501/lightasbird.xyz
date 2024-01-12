@@ -112,3 +112,9 @@
     display: block;
     padding-right: 1em;
 }
+
+.markdown img + em {
+    display: block;
+    text-align: center;
+    font-size: small;
+}
