@@ -38,11 +38,10 @@ spoiler: ""
 
 存在一个$$Step \geq Entry$$，使得$$Step - Entry$$和$$2 * Step - Entry$$关于$$r$$同余。即两个式子除以$$r$$ 的余数相等。数学的符号化表达为：
 
-$$Step - Entry\equiv 2 * Step - Entry \pmod r$$
-
+<center>$$Step - Entry\equiv 2 * Step - Entry \pmod r$$</center><br/>
 余数运算也支持加减乘除，那么以上等式又等价于：
 
-$$Step\equiv 0 \pmod r$$
+<center>$$Step\equiv 0 \pmod r$$</center><br/>
 
 即存在一个$$Step \geq Entry$$，使得$$Step$$能被$$r$$整除。
 
@@ -56,21 +55,21 @@ $$Step\equiv 0 \pmod r$$
 
 假设指向链头的指针是B，待在原处的指针是A，在B走了$$k$$步的时候，A走的步数为：
 
-$$Step + k$$
+<center>$$Step + k$$</center><br/>
 
 此时A在环中的位置是：
 
-$$(Step + k - Entry) \mod  r$$
+<center>$$(Step + k - Entry) \mod  r$$</center><br/>
 
 从第一个证明得知：
 
-$$Step = n * r$$
+<center>$$Step = n * r$$</center><br/>
 
-$$(Step + k - Entry) \mod r = (k - Entry) \mod  r$$
+<center>$$(Step + k - Entry) \mod r = (k - Entry) \mod  r$$</center><br/>
 
 所以A在环中的位置是：
 
-$$(k - Entry) \mod r$$
+<center>$$(k - Entry) \mod r$$</center><br/>
 
 可以发现，A在环中的位置，正是指针B在环中的位置。所以可以得知，只要$$k >= Entry$$，指针A和指针B在环中的位置就是一样的、重合的。
 
