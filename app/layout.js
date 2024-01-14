@@ -3,6 +3,7 @@ import HomeLink from "./HomeLink";
 import AutoRefresh from "./AutoRefresh";
 import { serif } from "./fonts";
 import "./global.css";
+import Image from 'next/image';
 
 export default function RootLayout({ children }) {
   return (
@@ -14,11 +15,13 @@ export default function RootLayout({ children }) {
             <span className="relative top-[4px] italic">
               by{" "}
               <Link href="https://github.com/breeze2501" target="_blank">
-                <img
-                  alt="Yipu Zhang"
-                  src="https://github.com/breeze2501.png"
-                  className="relative -top-1 mx-1 inline h-8 w-8 rounded-full"
-                />
+                  <Image
+                    alt="Yipu Zhang"
+                    src="/avatar.jpeg"
+                    width="0" // useless?
+                    height="0" // useless?
+                    className="relative -top-1 mx-1 h-8 w-8 inline rounded-full"
+                  />
               </Link>
             </span>
           </header>
