@@ -4,6 +4,7 @@ import AutoRefresh from "./AutoRefresh";
 import { serif } from "./fonts";
 import "./global.css";
 import Image from 'next/image';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function RootLayout({ children }) {
   return (
@@ -15,17 +16,18 @@ export default function RootLayout({ children }) {
             <span className="relative top-[4px] italic">
               by{" "}
               <Link href="https://github.com/breeze2501" target="_blank">
-                  <Image
-                    alt="Yipu Zhang"
-                    src="/avatar.jpeg"
-                    width="0" // useless?
-                    height="0" // useless?
-                    className="relative -top-1 mx-1 h-8 w-8 inline rounded-full"
-                  />
+                <Image
+                  alt="Yipu Zhang"
+                  src="/avatar.jpeg"
+                  width="0" // useless?
+                  height="0" // useless?
+                  className="relative -top-1 mx-1 h-8 w-8 inline rounded-full"
+                />
               </Link>
             </span>
           </header>
           <main>{children}</main>
+          <Analytics />
         </body>
       </html>
     </AutoRefresh>
